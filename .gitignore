@@ -1,6 +1,6 @@
 # Ignore node_modules directory
 node_modules/
-models/ggml-model-gpt4all-falcon-q4_0.bin
+src/models/*.bin
 
 # Ignore user-specific files
 .npmrc
