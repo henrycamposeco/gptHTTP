@@ -1,10 +1,10 @@
 import fs from "fs/promises";
 import {createCompletion, loadModel} from "gpt4all";
-import {DEFAULT_PERSONA, DEFAULT_PROMPT, LOAD_MODEL_CONFIGURATION, MODEL_NAME} from "./constants.js";
+import {DEFAULT_PERSONA, DEFAULT_PROMPT, LOAD_MODEL_CONFIGURATION, MODEL_NAME, PERSONAS_PATH} from "./constants.js";
 
 async function doComplete(persona, prompt) {
     const model = await loadModel(MODEL_NAME, LOAD_MODEL_CONFIGURATION);
-    const filePath = `./personas/${persona}.txt`
+    const filePath = `${PERSONAS_PATH}/${persona}.txt`
     try {
         model.config.promptTemplate = await fs.readFile(filePath, 'utf8');
         return createCompletion(model, [{
