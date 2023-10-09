@@ -1,6 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import generateCompletion from "./gptCompletion.js";
+import chatFilter from "./chatFilter.js";
 
 const app = express();
 app.use(bodyParser.json())
@@ -12,11 +13,11 @@ app.post("/gpt", async (req, res) => {
 
     try {
         const rawResponse = await generateCompletion(prompt, persona);
-        const response = rawResponse.choices[0].message;
-        res.send(response);
+        const response = chatFilter(rawResponse.choices[0].message?.content);
+        res.send({content: response});
     } catch (err) {
         console.error("Error in main function:", err);
-        res.status(500).send("Internal Server Error");
+        res.send({content: "...sorry I was distracted, can you repeat that?"});
     }
 });
 
