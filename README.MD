@@ -31,12 +31,15 @@ http://localhost:3000/gpt
 ```json
 {
   "prompt": "tell me a random curiosity",
-  "persona": "henry"
+  "persona": "henry",
+  "flush": true
 }
 ```
 
 - prompt: is the text to be completed
 - persona: is the persona to be used
-    - the /personas directory contains the personas to be used
-    - a persona is a text file with the persona prompt configuration
+    * the src/personas directory contains the personas to be used
+    * a persona is a text file with the persona prompt configuration
+- flush: is an optional boolean to flush the historical conversations for the persona, src/history directory contains
+  the historical conversations for each persona
 
