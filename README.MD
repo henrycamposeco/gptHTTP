@@ -20,13 +20,17 @@ An http client for expose gpt4All API
 
 ## API
 
-### POST /gpt
+### Method: POST
 
-#### Request
+#### URL
+
+http://localhost:3000/gpt
+
+#### Request Body
 
 ```json
 {
-  "prompt": "who are you?",
+  "prompt": "tell me a random curiosity",
   "persona": "henry"
 }
 ```

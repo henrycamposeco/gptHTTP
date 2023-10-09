@@ -6,6 +6,8 @@ export const PERSONAS_PATH = './src/personas';
 
 export const HISTORY_PATH = './src/history';
 
+export const ADDITIONAL_CONTEXT_STRING = ', be creative, use a informal tone, if you dont know the answer tell something funny.';
+
 export const MODEL_INFERENCE_CONFIGURATION = {
     temp: 0.8,
     topK: 40,
