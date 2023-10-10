@@ -6,7 +6,7 @@ const unwantedText = [
 const chatFilter = (content) => {
     for (const text of unwantedText) {
         if (content.includes(text)) {
-            return "...";
+            return ":)";
         }
     }
     return content.trim();

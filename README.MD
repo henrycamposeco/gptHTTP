@@ -1,6 +1,6 @@
 # Project Name: gptHTTP
 
-An http client for expose gpt4All API
+A http server for exposing a gpt4All API
 
 ## Requirements
 
@@ -30,8 +30,8 @@ http://localhost:3000/gpt
 
 ```json
 {
-  "prompt": "tell me a random curiosity",
-  "persona": "henry",
+  "prompt": "what is water made of?",
+  "persona": "default",
   "flush": true
 }
 ```

@@ -6,8 +6,11 @@ export const PERSONAS_PATH = './src/personas';
 
 export const HISTORY_PATH = './src/history';
 
-export const PROMPT_HEADER = 'Assistant will answer in a creative way, use an informal tone, will never reveal that is an AI.';
-export const PROMPT_FOOTER = 'response is in JSON format';
+export const PROMPT_HEADER = 'Text transcript of a never-ending conversation between User and Assistant. In the transcript, gestures and other non-verbal actions are written between asterisks (for example, waves hello or smiles, or looks happy).';
+
+export const PROMPT_FOOTER = '';
+
+export const PROMPT_TEMPLATE = '### Instruction:\n%1\n### Response:\n';
 
 export const MODEL_INFERENCE_CONFIGURATION = {
     verbose: true,
@@ -28,5 +31,3 @@ export const LOAD_MODEL_CONFIGURATION = {
 export const DEFAULT_PROMPT = 'tell me a joke';
 
 export const DEFAULT_PERSONA = 'default';
-
-export const PROMPT_TEMPLATE = '### Instruction:\n%1\n### Response:\n';
