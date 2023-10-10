@@ -6,7 +6,7 @@ export const PERSONAS_PATH = './src/personas';
 
 export const HISTORY_PATH = './src/history';
 
-export const PROMPT_HEADER = 'Text transcript of a never-ending conversation between User and Assistant. In the transcript, gestures and other non-verbal actions are written between asterisks (for example, waves hello or smiles, or looks happy).';
+export const PROMPT_HEADER = 'Text transcript of a never-ending conversation between User and Assistant. Conversation is fun, and kind.';
 
 export const PROMPT_FOOTER = '';
 

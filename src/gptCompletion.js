@@ -31,6 +31,7 @@ async function doComplete(prompt = DEFAULT_PROMPT, persona = DEFAULT_PERSONA, fl
         }];
         const response = await createCompletion(model, history.concat(newPromptEntry), {
             ...MODEL_INFERENCE_CONFIGURATION,
+            systemPromptTemplate: '### System:',
             promptHeader: PROMPT_HEADER,
             promptFooter: PROMPT_FOOTER,
         });
