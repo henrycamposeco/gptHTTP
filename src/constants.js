@@ -6,7 +6,7 @@ export const PERSONAS_PATH = './src/personas';
 
 export const HISTORY_PATH = './src/history';
 
-export const PROMPT_HEADER = 'Text transcript of a never-ending conversation between User and Assistant. Conversation is fun, and kind.';
+export const PROMPT_HEADER = 'Text transcript of a never-ending conversation between User and Assistant';
 
 export const PROMPT_FOOTER = '';
 

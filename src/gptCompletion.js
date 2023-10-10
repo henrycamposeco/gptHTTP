@@ -18,9 +18,9 @@ async function doComplete(prompt = DEFAULT_PROMPT, persona = DEFAULT_PERSONA, fl
     const historyManager = new FileHistory(`${HISTORY_PATH}/${persona}.history.txt`);
 
     const model = await loadModel(MODEL_NAME, LOAD_MODEL_CONFIGURATION);
-    const filePath = `${PERSONAS_PATH}/${persona}.txt`
+    const personaConfigurationFile = `${PERSONAS_PATH}/${persona}.txt`
     try {
-        model.config.systemPrompt = await fs.readFile(filePath, 'utf8');
+        model.config.systemPrompt = await fs.readFile(personaConfigurationFile, 'utf8');
 
         model.config.promptTemplate = PROMPT_TEMPLATE;
 
@@ -31,7 +31,7 @@ async function doComplete(prompt = DEFAULT_PROMPT, persona = DEFAULT_PERSONA, fl
         }];
         const response = await createCompletion(model, history.concat(newPromptEntry), {
             ...MODEL_INFERENCE_CONFIGURATION,
-            systemPromptTemplate: '### System:',
+            // systemPromptTemplate: '### System:',
             promptHeader: PROMPT_HEADER,
             promptFooter: PROMPT_FOOTER,
         });

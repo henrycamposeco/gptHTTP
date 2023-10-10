@@ -14,9 +14,17 @@ A http server for exposing a gpt4All API
 
 ## Usage
 
-- update the constants.js file to set MODEL_PATH to the right model directory
-- update MODEL_NAME
-- no need to update the other constants
+- install requirements
+- install and run the node commands above
+- modify constants if needed
+- first run it will download the model specified in MODEL_NAME constant file to the MODEL_PATH directory
+- if you want to disable personas behavior and make it run faster uncomment line in gptCompletion.js
+
+```javascript
+  // systemPromptTemplate: '### System:' 
+```
+
+![Alt Text](./src/static/screenshot.png)
 
 ## API
 
@@ -42,4 +50,9 @@ http://localhost:3000/gpt
     * a persona is a text file with the persona prompt configuration
 - flush: is an optional boolean to flush the historical conversations for the persona, src/history directory contains
   the historical conversations for each persona
+
+## Additional resources
+
+- gpt4All API docs https://docs.gpt4all.io/gpt4all_typescript.html#api-reference
+- prompt templates https://medium.com/@manoranjan.rajguru/prompt-template-for-opensource-llms-9f7f6fe8ea5
 
